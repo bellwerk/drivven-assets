@@ -1,4 +1,4 @@
-/* drivven home bundle: dvh1-1.0.1 dvh2-1.0.0 dvh3-1.0.1 dvh4-1.0.3 dvh11-1.0.0 dvh13-1.0.3 dvh14-1.0.3 dvh15-1.0.2 dvh16-1.0.3 dvh21-1.0.0 dvh22-1.0.2 dvh23-1.0.0 dvh24-1.0.1 dvh25-1.0.5 dvh26-1.0.0 dvh29-1.0.0 dvh30-1.0.1 dvh31-1.0.3 dvh32-1.0.2 dvh8-1.0.0 dvh9-1.0.1 dvh7-1.0.0 dvh12-1.0.1 dvh17-1.0.3 dvh18-1.0.1 dvh19-1.0.1 dvh10-1.0.1 dvh20-1.0.5 dvh28-1.0.0 dvh27-1.0.0 dvh33-1.0.1 dvft1-1.0.5 dvft2-1.0.2 dvft3-1.0.0 dvft4-1.0.0 */
+/* drivven home bundle: dvh1-1.0.1 dvh2-1.0.0 dvh3-1.0.1 dvh4-1.0.3 dvh11-1.0.0 dvh13-1.0.3 dvh14-1.0.3 dvh15-1.0.2 dvh16-1.0.3 dvh21-1.0.0 dvh22-1.0.2 dvh23-1.0.0 dvh24-1.0.1 dvh25-1.0.5 dvh26-1.0.0 dvh29-1.0.0 dvh30-1.0.1 dvh31-1.0.3 dvh32-1.0.2 dvh8-1.0.0 dvh9-1.0.1 dvh7-1.0.0 dvh12-1.0.1 dvh17-1.0.3 dvh18-1.0.1 dvh19-1.0.1 dvh10-1.0.1 dvh20-1.0.5 dvh28-1.0.0 dvh27-1.0.0 dvh33-1.0.1 dvft1-1.0.5 dvft2-1.0.2 dvft3-1.0.0 dvft4-1.0.0 + dv-fix */
 /* dvh1-1.0.1 */
 try{(function(){var H=document.documentElement;if(H.getAttribute('data-wf-page')!=='6a5a6ffe44cec98545c404ca')return;H.classList.add('dvh');var s=document.createElement('style');s.textContent=".dvh:not(#_#_):not(#_#_) .main-inventory{margin-top:40px!important}.dvh:not(#_#_):not(#_#_) .dvsh-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 24px;margin:0 0 20px}.dvh:not(#_#_):not(#_#_) .dvsh-head h2{margin:0;font-size:clamp(28px,2.5vw,36px);line-height:1.1;font-weight:500;letter-spacing:-.02em;color:#132023}.dvh:not(#_#_):not(#_#_) .dvsh-head p{margin:8px 0 0;font-size:16px;line-height:1.5;color:#132023cc}.dvh:not(#_#_):not(#_#_) .dvsh-head p strong{color:#132023;font-weight:500}.dvh:not(#_#_):not(#_#_) .dvsh-ctrl{display:flex;align-items:center;gap:8px}.dvh:not(#_#_):not(#_#_) .dvsh-arrow{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:999px;background:#fff;color:#132023;text-decoration:none;transition:background-color .15s,opacity .15s}.dvh:not(#_#_):not(#_#_) .dvsh-arrow:hover{background:#f2f5f5}.dvh:not(#_#_):not(#_#_) .dvsh-arrow[aria-disabled=true]{opacity:.35;pointer-events:none}.dvh:not(#_#_):not(#_#_) .dvsh-all{margin-left:8px;font-size:16px;font-weight:500;color:#132023;text-decoration:underline;text-underline-offset:4px}.dvh:not(#_#_):not(#_#_) .main-inventory-list.dvsh-track{display:flex!important;grid-template-columns:none!important;gap:16px!important;overflow-x:auto;overscroll-behavior-x:contain;flex-wrap:nowrap!important;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 0 4px!important}.dvh:not(#_#_):not(#_#_) .dvsh-track::-webkit-scrollbar{display:none}.dvh:not(#_#_):not(#_#_) .dvsh-track>.main-inventory-item,.dvh:not(#_#_):not(#_#_) .dvsh-track>.dvsh-more{flex:0 0 calc((100% - 48px)/3.4)!important;width:auto!important;max-width:none!important;scroll-snap-align:start}";document.head.appendChild(s)})();
 }catch(e){console.warn("dv dvh1-1.0.1",e)}
@@ -104,9 +104,8 @@ try{!function(){var t=document,e=":root:not(#_#_):not(#_#_) .dvcta .dv-footer-ac
 /* dvft4-1.0.0 */
 try{!function(){var s=document.createElement('style');s.textContent=":root:not(#_#_):not(#_#_) .dv-quiz legend{font-size:clamp(22px,1.9vw,26px)!important;font-weight:500!important;line-height:1.2!important;letter-spacing:-.015em!important;margin:0 0 18px!important;text-wrap:balance!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-options{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-option{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;width:100%!important;min-height:52px!important;margin:0!important;padding:12px 16px 12px 18px!important;border:1px solid #dde3e2!important;border-radius:14px!important;background:#fff!important;color:#132023!important;font-size:15px!important;font-weight:500!important;line-height:1.3!important;text-align:left!important;box-shadow:none!important;transition:border-color .15s,background-color .15s!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-option::after{content:\"\"!important;flex:none!important;width:18px!important;height:18px!important;box-sizing:border-box!important;border:1.5px solid #b7c4c2!important;border-radius:50%!important;background:#fff!important;transition:border .15s!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-option:hover{border-color:#7a9b76!important;background:#f7f9f8!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-option[aria-pressed=true]{border-color:#132023!important;background:#f3f5f6!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-option[aria-pressed=true]::after{border:5px solid #132023!important}:root:not(#_#_):not(#_#_) .dv-quiz .dv-quiz-option:focus-visible{outline:2px solid #7a9b76!important;outline-offset:2px!important}";(document.head||document.documentElement).appendChild(s)}();
 }catch(e){console.warn("dv dvft4-1.0.0",e)}
-
-try{
-/* drivven a11y + adapt fixes (impeccable audit 2026-11-27) */
+/* dv-fix */
+try{/* drivven a11y + adapt fixes (impeccable audit 2026-11-27) */
 (function () {
   var d = document;
   var css =
@@ -147,23 +146,41 @@ try{
   function landmarks() {
     var mains = d.querySelectorAll('main,[role=main]');
     if (mains.length > 1) {
-      var h1 = d.querySelector('h1'), keep = null;
-      for (var i = 0; i < mains.length; i++) if (h1 && mains[i].contains(h1)) keep = mains[i];
-      keep = keep || mains[0];
-      for (i = 0; i < mains.length; i++) if (mains[i] !== keep && !keep.contains(mains[i])) mains[i].setAttribute('role', 'none');
-      for (i = 0; i < mains.length; i++) if (mains[i] !== keep && keep.contains(mains[i])) mains[i].setAttribute('role', 'none');
+      var anc = mains[0].parentElement, ok = true, i;
+      while (anc && anc !== d.body) {
+        ok = true;
+        for (i = 1; i < mains.length; i++) if (!anc.contains(mains[i])) ok = false;
+        if (ok) break;
+        anc = anc.parentElement;
+      }
+      var nested = false;
+      for (i = 1; i < mains.length; i++) if (mains[0].contains(mains[i])) nested = true;
+      if (nested) {
+        for (i = 1; i < mains.length; i++) mains[i].setAttribute('role', 'none');
+      } else if (anc && anc !== d.body) {
+        for (i = 0; i < mains.length; i++) mains[i].setAttribute('role', 'none');
+        anc.setAttribute('role', 'main');
+        if (!anc.id) anc.id = 'dv-main';
+      } else {
+        for (i = 1; i < mains.length; i++) mains[i].setAttribute('role', 'none');
+      }
     }
-    var main = d.querySelector('main:not([role=none]),[role=main]');
+    var main = d.querySelector('[role=main]') || d.querySelector('main:not([role=none])');
     var ft = d.querySelector('footer,[role=contentinfo]') ? null : d.querySelector('.drivven-footer');
     if (ft) ft.setAttribute('role', 'contentinfo');
-    if (main && !d.querySelector('.dv-skip')) {
+    if (main) {
       if (!main.id) main.id = 'dv-main';
-      if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
-      var a = d.createElement('a');
-      a.className = 'dv-skip';
-      a.href = '#' + main.id;
-      a.textContent = 'Aller au contenu';
-      d.body.insertBefore(a, d.body.firstChild);
+      var sk = d.getElementById('dvSkip') || d.querySelector('.dv-skip');
+      if (sk) {
+        var tg = d.getElementById((sk.getAttribute('href') || '').slice(1));
+        if (!tg || tg.getAttribute('role') === 'none') sk.setAttribute('href', '#' + main.id);
+      } else {
+        var a = d.createElement('a');
+        a.className = 'dv-skip';
+        a.href = '#' + main.id;
+        a.textContent = 'Aller au contenu principal';
+        d.body.insertBefore(a, d.body.firstChild);
+      }
     }
   }
 
@@ -224,10 +241,11 @@ try{
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', run);
   else run();
   window.addEventListener('load', function () {
-    try { proxies(); headings(); contrast(); } catch (e) {}
+    try { proxies(); landmarks(); headings(); contrast(); } catch (e) {}
     setTimeout(function () { try { proxies(); contrast(); } catch (e) {} }, 1500);
   });
   var rt;
   window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { try { headings(); } catch (e) {} }, 300); });
 })();
-}catch(e){console.warn("dv fix",e)}
+
+}catch(e){console.warn("dv dv-fix",e)}

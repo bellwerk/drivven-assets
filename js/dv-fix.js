@@ -39,23 +39,41 @@
   function landmarks() {
     var mains = d.querySelectorAll('main,[role=main]');
     if (mains.length > 1) {
-      var h1 = d.querySelector('h1'), keep = null;
-      for (var i = 0; i < mains.length; i++) if (h1 && mains[i].contains(h1)) keep = mains[i];
-      keep = keep || mains[0];
-      for (i = 0; i < mains.length; i++) if (mains[i] !== keep && !keep.contains(mains[i])) mains[i].setAttribute('role', 'none');
-      for (i = 0; i < mains.length; i++) if (mains[i] !== keep && keep.contains(mains[i])) mains[i].setAttribute('role', 'none');
+      var anc = mains[0].parentElement, ok = true, i;
+      while (anc && anc !== d.body) {
+        ok = true;
+        for (i = 1; i < mains.length; i++) if (!anc.contains(mains[i])) ok = false;
+        if (ok) break;
+        anc = anc.parentElement;
+      }
+      var nested = false;
+      for (i = 1; i < mains.length; i++) if (mains[0].contains(mains[i])) nested = true;
+      if (nested) {
+        for (i = 1; i < mains.length; i++) mains[i].setAttribute('role', 'none');
+      } else if (anc && anc !== d.body) {
+        for (i = 0; i < mains.length; i++) mains[i].setAttribute('role', 'none');
+        anc.setAttribute('role', 'main');
+        if (!anc.id) anc.id = 'dv-main';
+      } else {
+        for (i = 1; i < mains.length; i++) mains[i].setAttribute('role', 'none');
+      }
     }
-    var main = d.querySelector('main:not([role=none]),[role=main]');
+    var main = d.querySelector('[role=main]') || d.querySelector('main:not([role=none])');
     var ft = d.querySelector('footer,[role=contentinfo]') ? null : d.querySelector('.drivven-footer');
     if (ft) ft.setAttribute('role', 'contentinfo');
-    if (main && !d.querySelector('.dv-skip')) {
+    if (main) {
       if (!main.id) main.id = 'dv-main';
-      if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
-      var a = d.createElement('a');
-      a.className = 'dv-skip';
-      a.href = '#' + main.id;
-      a.textContent = 'Aller au contenu';
-      d.body.insertBefore(a, d.body.firstChild);
+      var sk = d.getElementById('dvSkip') || d.querySelector('.dv-skip');
+      if (sk) {
+        var tg = d.getElementById((sk.getAttribute('href') || '').slice(1));
+        if (!tg || tg.getAttribute('role') === 'none') sk.setAttribute('href', '#' + main.id);
+      } else {
+        var a = d.createElement('a');
+        a.className = 'dv-skip';
+        a.href = '#' + main.id;
+        a.textContent = 'Aller au contenu principal';
+        d.body.insertBefore(a, d.body.firstChild);
+      }
     }
   }
 
@@ -116,7 +134,7 @@
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', run);
   else run();
   window.addEventListener('load', function () {
-    try { proxies(); headings(); contrast(); } catch (e) {}
+    try { proxies(); landmarks(); headings(); contrast(); } catch (e) {}
     setTimeout(function () { try { proxies(); contrast(); } catch (e) {} }, 1500);
   });
   var rt;
