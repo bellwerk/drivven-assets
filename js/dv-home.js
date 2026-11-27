@@ -115,7 +115,8 @@ try{/* drivven a11y + adapt fixes (impeccable audit 2026-11-27) */
     '.rs7-pause:focus-visible{outline:2px solid #d4ff00;outline-offset:2px}' +
     '.rs7-pause[hidden]{display:none}' +
     '.dv-sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
-    'html .drivven-footer .footer-menu-link{min-height:24px!important;align-items:center}' +
+    ':root:not(#_#_):not(#_#_):not(#_#_) .footer-menu-link{min-height:24px!important;align-items:center!important}' +
+    ':root:not(#_#_):not(#_#_):not(#_#_) :is(.footer-legal-link,.drivven-footer-legal-link){display:inline-flex!important;align-items:center!important;min-height:24px!important}' +
     ':root:not(#_#_):not(#_#_):not(#_#_) .dv-check[hidden]{display:none!important}' +
     ':root:not(#_#_):not(#_#_) .dv-quiz-progress-copy{color:#5a676b!important}' +
     ':root:not(#_#_):not(#_#_) .dvsl-more{color:#132023!important}' +
