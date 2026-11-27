@@ -9,6 +9,9 @@
     '.rs7-pause[hidden]{display:none}' +
     '.dv-sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}' +
     'html .drivven-footer .footer-menu-link{min-height:24px!important;align-items:center}' +
+    ':root:not(#_#_):not(#_#_):not(#_#_) .dv-check[hidden]{display:none!important}' +
+    ':root:not(#_#_):not(#_#_) .dv-quiz-progress-copy{color:#5a676b!important}' +
+    ':root:not(#_#_):not(#_#_) .dvsl-more{color:#132023!important}' +
     '@media (prefers-reduced-motion:reduce){.dv-skip{transition:none}}';
   var st = d.createElement('style');
   st.id = 'dv-fix-css';
@@ -81,13 +84,21 @@
     var hs = d.querySelectorAll('h1,h2,h3,h4,h5,h6'), stack = [];
     for (var i = 0; i < hs.length; i++) {
       var h = hs[i];
-      if (!h.offsetWidth && !h.offsetHeight) continue;
+      if ((!h.offsetWidth && !h.offsetHeight) || getComputedStyle(h).visibility === 'hidden' || h.closest('[aria-hidden=true],[hidden]')) continue;
       var o = +h.tagName[1];
       while (stack.length && stack[stack.length - 1].o >= o) stack.pop();
       var eff = stack.length ? Math.min(o, stack[stack.length - 1].e + 1) : Math.min(o, 1);
       if (eff !== o) h.setAttribute('aria-level', String(eff));
       else h.removeAttribute('aria-level');
       stack.push({ o: o, e: eff });
+    }
+  }
+
+  function brand() {
+    var b = d.querySelectorAll('a.fn-brand-box');
+    for (var i = 0; i < b.length; i++) {
+      if (!b[i].textContent.trim() && !b[i].getAttribute('aria-label') && !b[i].querySelector('img[alt]:not([alt=""])')) b[i].setAttribute('aria-label', 'drivven, accueil');
+      if (b[i].getAttribute('href') === '#') b[i].setAttribute('href', '/');
     }
   }
 
@@ -127,6 +138,7 @@
     try { proxies(); } catch (e) {}
     try { landmarks(); } catch (e) {}
     try { dupIds(); } catch (e) {}
+    try { brand(); } catch (e) {}
     try { slider(); } catch (e) {}
     try { headings(); } catch (e) {}
     try { contrast(); } catch (e) {}
